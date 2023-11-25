@@ -6,7 +6,7 @@ import facebook from '../../../public/images/facebook.png'
 
 const Footer = () => {
   return (
-    <section className="container">
+    <footer className="container">
       <div className={cls.footer}>
         <div className={cls.footerTop}>
           <div><img src={logo} /></div>
@@ -27,7 +27,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </section>
+    </footer>
   )
 }
 
