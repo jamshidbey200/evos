@@ -1,0 +1,97 @@
+@import "../../styles/mixins";
+
+.header {
+  padding-top: 13px;
+  margin-bottom: 26px;
+  @include flexAllCenter;
+
+  .left {
+    @include flexAllCenter;
+
+    .logo {
+      margin-right: 42px;
+      cursor: pointer;
+    }
+    .navigation {
+      @include flexAllCenter;
+      gap: 32px;
+
+      @media (max-width: 672px) {
+        display: none;
+      }
+
+      li {
+        list-style: none;
+
+        a {
+          text-decoration: none;
+          font-size: 16px;
+          color: #000;
+        }
+      }
+    }
+  }
+
+  .right {
+    @include flexAllCenter;
+    gap: 32px;
+
+    .delivery {
+      @include flexAllCenter;
+      gap: 12px;  
+
+      @media (max-width: 955px) {
+        display: none;
+      }
+
+      .location {
+        padding: 7px;
+        background-color: #e7f3fc;
+        border-radius: 50%;
+        cursor: pointer;
+        @include flexAlignCenter;
+      }
+
+      .topText {
+        font-size: 14px;
+      }
+      .bottomText {
+        font-size: 13px;
+        color: #5982e7;
+        cursor: pointer;
+      }
+    }
+
+    .actions {
+      @include flexAllCenter;
+      gap: 12px;
+
+      .korzinaIcon {
+        padding: 9px;
+        background-color: #e7f3fc;
+        border-radius: 50%;
+        cursor: pointer;
+        @include flexAlignCenter;
+      }
+
+      .lang {
+        @include flexAllCenter;
+        gap: 8px;
+        background-color: #e7f3fc;
+        border-radius: 155px;
+        padding: 8px 8px 8px 12px;
+        cursor: pointer;
+      }
+      .enterText {
+        padding: 8px 12px;
+        background-color: #e7f3fc;
+        font-size: 16px;
+        font-weight: 500;
+        color: #5982e7;
+        border-radius: 155px;
+        cursor: pointer;
+        @include flexAlignCenter;
+      }
+    }
+  }
+}

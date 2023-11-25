@@ -1,0 +1,19 @@
+@mixin flexAllCenter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flexAlignCenter {
+  display: flex;
+  align-items: center;
+}
+
+@mixin bannerSliderIcon {
+  position: absolute;
+  top: 40%;
+  border-radius: 50%;
+  background-color: #fff;
+  padding: 12px;
+  cursor: pointer;
+}

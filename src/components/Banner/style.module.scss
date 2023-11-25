@@ -1,0 +1,44 @@
+@import "../../styles/mixins";
+
+.banner {
+  position: relative;
+  margin-bottom: 32px;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prevIcon {
+    @include bannerSliderIcon;
+    @include flexAlignCenter;
+    left: 0;
+    margin-left: -20px;
+
+    @media (max-width: 580px) {
+        padding: 5px;
+        width: 25px;
+        margin-left: -10px;
+    }
+  }
+
+  .nextIcon {
+    @include bannerSliderIcon;
+    @include flexAlignCenter;
+    right: 0;
+    margin-right: -20px;
+
+     @media (max-width: 580px) {
+        padding: 5px;
+        width: 25px;
+        margin-right: -10px;
+    }
+  }
+
+  .dots {
+    position: absolute;
+    bottom: 5%;
+    transform: translate(550px);
+  }
+}

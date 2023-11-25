@@ -1,0 +1,108 @@
+@import "../../styles/mixins";
+
+.topCategory {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+
+  .category {
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+
+    @media (max-width: 560px) {
+      font-size: 14px;
+      // font-weight: 500;
+    }
+  }
+
+  .category:first-child {
+    cursor: pointer;
+    background-color: #e7f3fc;
+    padding: 12px 16px;
+    border-radius: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5982e7;
+  }
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  @media (max-width: 500px) {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+  }
+}
+
+.cards {
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(288px, 1fr));
+  gap: 12px;
+
+  .card {
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    padding: 14px;
+
+    .image {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      img {
+        width: 275px;
+      }
+    }
+
+    .name {
+      font-size: 18px;
+      line-height: 24px;
+      font-weight: 600;
+      margin-top: 12px;
+      margin-bottom: 7px;
+    }
+    .desc {
+      font-size: 14px;
+      line-height: 20px;
+      font-weight: 500;
+      color: #48535b;
+      margin-bottom: 20px;
+    }
+
+    .action {
+      @include flexAllCenter;
+
+      .price {
+        font-size: 18px;
+        font-weight: 600;
+        color: #252c32;
+      }
+      .priceText {
+        font-size: 14px;
+        font-weight: 500;
+      }
+
+      .btn {
+        padding: 10px 20px;
+        font-weight: 500;
+        font-size: 14px;
+        background-color: #5982e7;
+        border: none;
+        border-radius: 20px;
+        color: #fff;
+        cursor: pointer;
+      }
+    }
+  }
+}
